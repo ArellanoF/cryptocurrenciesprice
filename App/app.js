@@ -1,5 +1,7 @@
+
+
 const api_url = "https://api.coinranking.com/v2/coins";
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+const proxyUrl = "https://api.allorigins.win/raw?url=";
 const apiKey = "coinranking9bb037a59144cfc42db83d682504213d6b05889f3e0a73a5"
 
 const HTMLResponse = document.querySelector("#app");
@@ -10,7 +12,9 @@ fetch(`${proxyUrl}${api_url}`, {
     headers: {
         'Content-Type': 'application/json',
         'x-access-token': '${apiKey}',
-        'Acces-Control-Allow-Origin': '*'
+        'Acces-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH',
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
     }
 }).then((response) => {
     if (response.ok) {
@@ -29,7 +33,6 @@ fetch(`${proxyUrl}${api_url}`, {
                         cryptoCoins += `<td> ${coin.name}</td>`;
                         cryptoCoins += `<td> ${coin.uuid}</td>`;
                         cryptoCoins += `<td> ${coin.btcPrice}</td>`;	
-                        
                         cryptoCoins += `<td> ${ Math.round(coin.price)} $</td>`;
                         cryptoCoins += `<td> ${coin.symbol}</td>`;
                         "</tr>"
