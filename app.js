@@ -14,7 +14,8 @@ fetch(`${proxyUrl}${api_url}`, {
         'x-access-token': '${apiKey}',
         'Acces-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH',
-        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+        'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+        cors:{origin: '*', credentials: true}
     }
 }).then((response) => {
     if (response.ok) {
