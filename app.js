@@ -12,7 +12,7 @@ fetch(`${proxyUrl}${api_url}`, {
     headers: {
         'Content-Type': 'application/json',
         'x-access-token': '${apiKey}',
-        'Acces-Control-Allow-Origin': '*',
+        'Acces-Control-Allow-Origin': 'https://arellanof.github.io/',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH',
         'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
         cors:{origin: '*', credentials: true}
