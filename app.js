@@ -1,7 +1,7 @@
 
 
 const api_url = "https://api.coinranking.com/v2/coins";
-const proxyUrl = "https://api.allorigins.win/raw?url=";
+const proxyUrl = "https://api.allorigins.win/raw?";
 const apiKey = "coinranking9bb037a59144cfc42db83d682504213d6b05889f3e0a73a5"
 
 const HTMLResponse = document.querySelector("#app");
