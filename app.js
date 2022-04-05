@@ -15,7 +15,7 @@ fetch(`${proxyUrl}${api_url}`, {
         'Acces-Control-Allow-Origin': 'https://arellanof.github.io/',
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH',
         'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
-        cors:{origin: '*', credentials: true}
+        
     }
 }).then((response) => {
     if (response.ok) {
